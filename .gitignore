@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and local experiment tracking
+logs/
+runs/
+wandb/
+tensorboard/
+
+# Large experiment artifacts
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+*.npz
+*.npy
+*.h5
+*.hdf5
+
+# Video and rendered outputs
+videos/
+*.mp4
+*.avi
+*.mov
+
+# Local datasets
+/data/
+/datasets/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
