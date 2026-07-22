@@ -2,7 +2,18 @@
 
 本目录按官方讲次保存每一讲的完整学习记录。
 
-建议命名：
+## 当前讲次
+
+### L01：Introduction to Robot Learning（学习中）
+
+- [课前导读](L01-introduction-to-robot-learning/00-preview.md)
+- [正式讲义](L01-introduction-to-robot-learning/01-notes.md)
+- [课堂练习与自测](L01-introduction-to-robot-learning/02-exercises.md)
+- [课后总结](L01-introduction-to-robot-learning/03-summary.md)
+
+完成练习并通过概念检查后，才能将本讲从“学习中”更新为“已完成”。
+
+## 目录约定
 
 ```text
 01-lectures/
