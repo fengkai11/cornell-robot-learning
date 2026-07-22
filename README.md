@@ -114,7 +114,7 @@ cornell-robot-learning/
 
 - [x] 创建项目仓库
 - [x] 建立初始目录和学习规范
-- [ ] Lecture 01：Introduction to Robot Learning
+- [ ] Lecture 01：Introduction to Robot Learning（学习中：导读、讲义和练习已建立）
 - [ ] Lecture 02：Fundamentals of Robotic Control
 - [ ] Assignment 0：NumPy and PyTorch 能力检查
 - [ ] 建立第一个 ManiSkill 任务形式化实验
