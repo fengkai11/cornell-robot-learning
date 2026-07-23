@@ -31,7 +31,7 @@ MDP / POMDP 形式化
 | 编号 | 主题 | 主要问题 | 状态 |
 |---|---|---|---|
 | L01 | Introduction to Robot Learning | 什么问题需要机器人学习，学习系统为何难以进入真实世界 | 学习中 |
-| L02 | Fundamentals of Robotic Control | 已知模型和目标时，如何用传统控制驱动机器人 | 未开始 |
+| L02 | Fundamentals of Robotic Control | 已知模型和目标时，如何用传统控制驱动机器人 | 学习中 |
 | L03 | Markov Decision Processes | 如何统一描述序贯决策任务 | 未开始 |
 | L04 | Deep Learning Tutorial | 策略、价值函数和感知模型所需的神经网络基础 | 未开始 |
 
