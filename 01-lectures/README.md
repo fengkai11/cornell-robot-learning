@@ -12,7 +12,16 @@
 - [课后总结](L01-introduction-to-robot-learning/03-summary.md)
 - 指定阅读笔记：[*The Bitter Lesson*](L01-introduction-to-robot-learning/reading-notes/01-the-bitter-lesson.md)
 
-完成练习并通过概念检查后，才能将本讲从“学习中”更新为“已完成”。
+### L02：Fundamentals of Robotic Control（学习中）
+
+- [课前导读](L02-fundamentals-of-robotic-control/00-preview.md)
+- [正式讲义](L02-fundamentals-of-robotic-control/01-notes.md)
+- [课堂练习与自测](L02-fundamentals-of-robotic-control/02-exercises.md)
+- [课后总结](L02-fundamentals-of-robotic-control/03-summary.md)
+
+L02 以 configuration、degrees of freedom、configuration space、task space、运动学和反馈控制为主线，建立后续 MDP、IL、MPC 与 visuomotor policy 所需的传统控制基线。
+
+完成练习并通过概念检查后，才能将讲次从“学习中”更新为“已完成”。
 
 ## 目录约定
 
@@ -27,7 +36,10 @@
 │   └── reading-notes/
 │       └── 01-the-bitter-lesson.md
 └── L02-fundamentals-of-robotic-control/
-    └── ...
+    ├── 00-preview.md
+    ├── 01-notes.md
+    ├── 02-exercises.md
+    └── 03-summary.md
 ```
 
 ## 文件职责
