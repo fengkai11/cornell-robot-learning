@@ -5,6 +5,9 @@
 - 推荐阅读：
 - 当前状态：未开始 / 学习中 / 已完成 / 待复习
 - 掌握目标：L1 / L2 / L3 / L4 / L5
+- 写作约束：[`resources/markdown-writing-constraints.md`](../resources/markdown-writing-constraints.md)
+
+> 本模板默认面向 GitHub 网页端。行内公式使用 `$...$`，独立公式使用起止符各自独占一行的 `$$...$$`；不得使用 `\[...\]` 作为公式分隔符。
 
 ## 0. 一句话概括
 
@@ -44,6 +47,14 @@
 
 ### 4.2 目标函数
 
+独立公式示例：
+
+```markdown
+$$
+J(\theta)=\mathbb{E}_{\tau\sim p_\theta(\tau)}\left[R(\tau)\right].
+$$
+```
+
 ### 4.3 约束与假设
 
 ## 5. 核心概念
@@ -58,6 +69,17 @@
 ## 6. 数学推导
 
 按“定义 → 代入 → 变形 → 结论 → 解释”的顺序书写，不省略关键假设。
+
+公式写法必须符合仓库写作约束。多行公式优先使用：
+
+```markdown
+$$
+\begin{aligned}
+A &= B + C, \\
+  &= D.
+\end{aligned}
+$$
+```
 
 ## 7. 算法流程
 
