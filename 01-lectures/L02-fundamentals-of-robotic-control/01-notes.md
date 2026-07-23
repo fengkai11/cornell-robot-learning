@@ -129,11 +129,7 @@ $$
 一般直觉是：
 
 $$
-\text{自由度}
-=
-\text{变量自由度总数}
--
-\text{独立约束数}.
+\text{自由度} = \text{变量自由度总数} - \text{独立约束数}.
 $$
 
 关键是“独立”。如果两个约束表达同一件事，不能重复扣除。
@@ -149,9 +145,7 @@ $$
 因此：
 
 $$
-q=(x,y,\theta),
-\qquad
-\dim(\mathcal Q)=3.
+q=(x,y,\theta), \qquad \dim(\mathcal Q)=3.
 $$
 
 空间刚体需要：
@@ -195,17 +189,13 @@ $$
 则 Grübler 公式为：
 
 $$
-\mathrm{dof}
-=
-m(N-1-J)+\sum_{i=1}^{J}f_i.
+\mathrm{dof} = m(N-1-J)+\sum_{i=1}^{J}f_i.
 $$
 
 等价地，若第 $i$ 个关节施加 $c_i=m-f_i$ 个约束：
 
 $$
-\mathrm{dof}
-=
-m(N-1)-\sum_{i=1}^{J}c_i.
+\mathrm{dof} = m(N-1)-\sum_{i=1}^{J}c_i.
 $$
 
 #### 串联 $k$ 关节机械臂
@@ -242,9 +232,7 @@ Grübler 公式依赖关节约束相互独立。若存在：
 一个可连续旋转的关节角满足周期性：
 
 $$
-\theta
-\equiv
-\theta+2k\pi.
+\theta \equiv \theta+2k\pi.
 $$
 
 因此它的构型空间更接近圆周 $S^1$，而不是整条实数线 $\mathbb R$。
@@ -266,9 +254,7 @@ $$
 角度误差常使用 wrap 操作：
 
 $$
-e_\theta
-=
-\operatorname{wrapToPi}(\theta_d-\theta).
+e_\theta = \operatorname{wrapToPi}(\theta_d-\theta).
 $$
 
 ### 3.2 构型空间表示与真实空间不同
@@ -395,9 +381,7 @@ $$
 工作空间是机器人末端能够到达的任务空间构型集合。
 
 $$
-\mathcal W
-=
-\{y\mid y=\phi(q),\ q\in\mathcal Q_{\mathrm{feasible}}\}.
+\mathcal W = \{y\mid y=\phi(q),\ q\in\mathcal Q_{\mathrm{feasible}}\}.
 $$
 
 工作空间受以下因素影响：
@@ -480,17 +464,13 @@ IK 解决的是几何映射，不自动解决：
 对前向运动学求时间导数：
 
 $$
-\dot y
-=
-\frac{\partial\phi(q)}{\partial q}\dot q.
+\dot y = \frac{\partial\phi(q)}{\partial q}\dot q.
 $$
 
 定义 Jacobian：
 
 $$
-J(q)
-=
-\frac{\partial\phi(q)}{\partial q}.
+J(q) = \frac{\partial\phi(q)}{\partial q}.
 $$
 
 于是：
@@ -518,11 +498,7 @@ $$
 如果机器人冗余，可以加入零空间运动：
 
 $$
-\dot q
-=
-J^\dagger\dot y_d
-+
-\left(I-J^\dagger J\right)z.
+\dot q = J^\dagger\dot y_d + \left(I-J^\dagger J\right)z.
 $$
 
 其中第二项不改变一阶任务空间速度，可以用于关节限位回避、避障或姿态偏好。
@@ -542,9 +518,7 @@ $$
 常见缓解方法是阻尼最小二乘：
 
 $$
-J_\lambda^\dagger
-=
-J^\top\left(JJ^\top+\lambda^2 I\right)^{-1}.
+J_\lambda^\dagger = J^\top\left(JJ^\top+\lambda^2 I\right)^{-1}.
 $$
 
 这牺牲一部分跟踪精度，换取更稳定的关节速度。
@@ -558,17 +532,7 @@ $$
 刚性机械臂常写成：
 
 $$
-M(q)\ddot q
-+
-C(q,\dot q)\dot q
-+
-g(q)
-+
-\tau_f(q,\dot q)
-=
-\tau
-+
-J(q)^\top f_{\mathrm{ext}}.
+M(q)\ddot q + C(q,\dot q)\dot q + g(q) + \tau_f(q,\dot q) = \tau + J(q)^\top f_{\mathrm{ext}}.
 $$
 
 其中：
@@ -907,13 +871,7 @@ $$
 PID 控制可写为：
 
 $$
-u(t)
-=
-k_p e(t)
-+
-k_i\int_0^t e(\tau)\,d\tau
-+
-k_d\dot e(t).
+u(t) = k_p e(t) + k_i\int_0^t e(\tau)\,d\tau + k_d\dot e(t).
 $$
 
 ### 10.3 积分饱和
@@ -980,18 +938,13 @@ $$
 可定义期望任务空间速度：
 
 $$
-\dot y_{\mathrm{cmd}}
-=
-\dot y_d+K_y e_y.
+\dot y_{\mathrm{cmd}} = \dot y_d+K_y e_y.
 $$
 
 再通过 differential IK：
 
 $$
-\dot q_{\mathrm{cmd}}
-=
-J^\dagger
-\left(\dot y_d+K_y e_y\right).
+\dot q_{\mathrm{cmd}} = J^\dagger \left(\dot y_d+K_y e_y\right).
 $$
 
 优点：
@@ -1045,9 +998,7 @@ Jacobian 或控制器
 路径只描述几何曲线：
 
 $$
-q(s),
-\qquad
-s\in[0,1].
+q(s), \qquad s\in[0,1].
 $$
 
 它回答“经过哪里”，不回答“什么时候到达”。
@@ -1166,9 +1117,7 @@ $$
 若希望末端沿直线接近，可使用任务空间速度控制：
 
 $$
-\dot q_t
-=
-J_\lambda^\dagger(q_t)K_y e_t.
+\dot q_t = J_\lambda^\dagger(q_t)K_y e_t.
 $$
 
 ### 13.4 成功条件
@@ -1256,11 +1205,7 @@ $$
 学习策略只输出残差：
 
 $$
-u_t
-=
-u_t^{\mathrm{base}}
-+
-\Delta u_\theta(o_t).
+u_t = u_t^{\mathrm{base}} + \Delta u_\theta(o_t).
 $$
 
 这种结构适合：
@@ -1479,7 +1424,7 @@ IK / differential IK
 
 - **H1**：在无障碍、模型准确、目标静止条件下，damped differential IK + 比例反馈应以更少数据、更稳定的方式达到高成功率；
 - **H2**：状态 MLP 策略在训练分布内可以拟合控制器，但在初始位姿、控制频率或动作尺度变化时更容易退化；
-- **H3**：加入模型偏差或目标观测噪声后，传统闭环仍可纠正部分误差，但若目标估计存在系统偏差，两类方法都会失败；
+- **H3**：加入模型偏差或目标观测器声后，传统闭环仍可纠正部分误差，但若目标估计存在系统偏差，两类方法都会失败；
 - **H4**：视觉输入策略的价值应通过遮挡、目标未知和在线纠错体现，而不是只在目标真值条件下比较。
 
 ### 17.3 环境
@@ -1574,9 +1519,7 @@ $$
 当目标状态不可直接获得时，控制问题会与感知耦合：
 
 $$
-o_t
-\longrightarrow
-\hat x_t\ \text{或}\ a_t.
+o_t \longrightarrow \hat x_t\ \text{或}\ a_t.
 $$
 
 本讲提供评价视觉策略的传统闭环基线。
