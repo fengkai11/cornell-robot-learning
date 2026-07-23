@@ -1,19 +1,19 @@
 name: Normalize short display math
 
 on:
-  push:
-    paths:
-      - .github/workflows/normalize-short-display-math.yml
+  create:
 
 permissions:
   contents: write
 
 jobs:
   normalize:
+    if: github.ref_type == 'branch' && github.ref == 'normalize-short-display-math-trigger'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Normalize short display math and update constraints
@@ -150,4 +150,5 @@ $$
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add 01-lectures/L02-fundamentals-of-robotic-control resources/markdown-writing-constraints.md .github/workflows/normalize-short-display-math.yml
           git commit -m "Normalize short display math blocks"
-          git push
+          git push origin main
+          git push origin --delete normalize-short-display-math-trigger || true
