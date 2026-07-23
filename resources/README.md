@@ -2,6 +2,12 @@
 
 本页集中记录课程官方资源和必要前置材料。课程主页始终作为信息主源。
 
+## 项目写作约束
+
+- [GitHub Markdown 写作约束](markdown-writing-constraints.md)
+
+本仓库主要在 GitHub 网页端阅读。课程讲义、作业推导和实验记录必须遵守上述公式、Mermaid、代码块与提交前检查规范。
+
 ## 官方入口
 
 - Cornell CS 4756/5756 Robot Learning Spring 2026：<https://www.cs.cornell.edu/courses/cs4756/2026sp/>
