@@ -18,6 +18,7 @@ Cornell CS 4756/5756 Spring 2026 将课程概括为两类基本问题：
 - 课程主页：<https://www.cs.cornell.edu/courses/cs4756/2026sp/>
 - 2026 Lecture 01 课件：<https://drive.google.com/file/d/1Wnwt55PPXzL0oT_WmXOhNUeq1bsHO06w/view?usp=sharing>
 - 指定阅读：Richard Sutton, *The Bitter Lesson*：<https://www.incompleteideas.net/IncIdeas/BitterLesson.html>
+- 本项目阅读记录：[*The Bitter Lesson*：原始理解、导师解析与机器人学习启示](reading-notes/01-the-bitter-lesson.md)
 
 补充参考：
 
@@ -95,6 +96,8 @@ IL / RL / MPC 的实现与比较
 1. **历史观察**：手工知识在短期有效，但常随规模增长而遇到平台期；
 2. **方法偏好**：优先研究能持续吸收更多计算和数据的方法；
 3. **非结论**：它并没有证明领域知识、物理结构、安全约束或系统分解永远无用。
+
+完成第一轮阅读后，将自己的原始理解、疑问和认知修订记录到 [`reading-notes/`](reading-notes/01-the-bitter-lesson.md)，不要只保留最终结论。
 
 ### 第四步：回到机器人任务
 
