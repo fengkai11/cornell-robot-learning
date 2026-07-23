@@ -10,6 +10,7 @@
 - [正式讲义](L01-introduction-to-robot-learning/01-notes.md)
 - [课堂练习与自测](L01-introduction-to-robot-learning/02-exercises.md)
 - [课后总结](L01-introduction-to-robot-learning/03-summary.md)
+- 指定阅读笔记：[*The Bitter Lesson*](L01-introduction-to-robot-learning/reading-notes/01-the-bitter-lesson.md)
 
 完成练习并通过概念检查后，才能将本讲从“学习中”更新为“已完成”。
 
@@ -22,7 +23,9 @@
 │   ├── 00-preview.md
 │   ├── 01-notes.md
 │   ├── 02-exercises.md
-│   └── 03-summary.md
+│   ├── 03-summary.md
+│   └── reading-notes/
+│       └── 01-the-bitter-lesson.md
 └── L02-fundamentals-of-robotic-control/
     └── ...
 ```
@@ -32,7 +35,8 @@
 - `00-preview.md`：课前导读、前置知识、带着问题阅读；
 - `01-notes.md`：正式讲授内容、定义、推导、例子；
 - `02-exercises.md`：概念题、推导题、机器人任务形式化练习；
-- `03-summary.md`：课后总结、掌握度和未解决问题。
+- `03-summary.md`：课后总结、掌握度和未解决问题；
+- `reading-notes/`：保存指定阅读的原始理解、导师解析、认知修订和待读问题。
 
 ## 学习要求
 
