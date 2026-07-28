@@ -1,0 +1,15 @@
+schema_version: "1.0"
+failures:
+  - {code: PERCEPTION_TARGET_MISSING, category: perception, severity: recoverable, retryable: true, default_action: retry, description: "未找到目标对象或目标位。"}
+  - {code: PERCEPTION_POSE_ERROR, category: perception, severity: recoverable, retryable: true, default_action: retry, description: "位姿估计超出允许误差。"}
+  - {code: PLANNING_UNREACHABLE, category: planning, severity: stop_required, retryable: false, default_action: human_intervention, description: "目标或中间位姿不可达。"}
+  - {code: APPROACH_COLLISION, category: approach, severity: stop_required, retryable: false, default_action: retreat, description: "自由空间抵近阶段发生碰撞。"}
+  - {code: ALIGNMENT_OUT_OF_TOLERANCE, category: alignment, severity: recoverable, retryable: true, default_action: retry, description: "接触前位置或姿态误差超限。"}
+  - {code: CONTACT_FORCE_EXCEEDED, category: safety, severity: dangerous, retryable: false, default_action: stop, description: "接触力超过安全阈值。"}
+  - {code: INSERTION_NO_PROGRESS, category: insertion, severity: recoverable, retryable: true, default_action: retry, description: "插入深度在规定窗口内没有增加。"}
+  - {code: INSERTION_JAMMED, category: insertion, severity: recoverable, retryable: true, default_action: retreat, description: "检测到卡滞或侧向挤压。"}
+  - {code: OBJECT_DROPPED, category: manipulation, severity: stop_required, retryable: false, default_action: human_intervention, description: "对象脱离夹爪或离开允许区域。"}
+  - {code: POLICY_OSCILLATION, category: policy, severity: recoverable, retryable: true, default_action: retreat, description: "动作方向频繁反转或末端高频震荡。"}
+  - {code: TIMEOUT, category: system, severity: recoverable, retryable: true, default_action: retry, description: "超过 episode 时间或步数限制。"}
+  - {code: RECOVERY_FAILED, category: recovery, severity: stop_required, retryable: false, default_action: human_intervention, description: "自动恢复次数耗尽仍未成功。"}
+  - {code: SAFETY_WORKSPACE_VIOLATION, category: safety, severity: dangerous, retryable: false, default_action: stop, description: "TCP 或对象超出安全工作空间。"}
