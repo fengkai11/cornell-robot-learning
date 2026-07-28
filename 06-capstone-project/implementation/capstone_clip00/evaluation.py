@@ -119,7 +119,7 @@ def _metric_value_and_samples(summary: dict[str, Any], name: str) -> tuple[float
         "mean_retries": (summary.get("mean_retries"), int(summary.get("episodes", 0))),
         "failure_diagnostic_coverage": (
             summary.get("failure_diagnostic_coverage"),
-            int(summary.get("failed_episodes", 0)),
+            int(summary.get("episodes", 0)),
         ),
     }
     return mapping.get(name, (None, 0))
