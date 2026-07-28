@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cornell-capstone-clip00"
+version = "0.1.0"
+description = "Application specification, validation, failure taxonomy, and offline evaluation for Clip 00."
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=7.4"]
+
+[tool.setuptools]
+packages = ["capstone_clip00"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
