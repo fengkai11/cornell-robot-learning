@@ -1,0 +1,66 @@
+schema_version: "1.0"
+task_id: "gear-insertion-state-v0"
+criteria:
+  - name: normal_distribution_success_rate
+    comparator: ">="
+    threshold: 0.90
+    unit: ratio
+    measurement: "evaluation_split=normal 的成功 episode 数除以该 split 总数。"
+    sample_count: 100
+    seeds: [0, 1, 2]
+    uses_privileged_truth: true
+    disturbance_scope: "位置扰动不超过 ±10 mm，姿态扰动不超过 ±3 deg。"
+  - name: mild_position_perturbation_success_rate
+    comparator: ">="
+    threshold: 0.75
+    unit: ratio
+    measurement: "evaluation_split=mild_position_perturbation 的成功率。"
+    sample_count: 100
+    seeds: [0, 1, 2]
+    uses_privileged_truth: true
+    disturbance_scope: "位置扰动扩大到 ±20 mm，其他条件保持不变。"
+  - name: jam_detection_recall
+    comparator: ">="
+    threshold: 0.80
+    unit: ratio
+    measurement: "ground_truth_jammed=true 的 episode 中 detected_jammed=true 的比例。"
+    sample_count: 50
+    seeds: [0, 1, 2]
+    uses_privileged_truth: true
+    disturbance_scope: "通过增大摩擦或减小间隙构造卡滞。"
+  - name: jam_recovery_success_rate
+    comparator: ">="
+    threshold: 0.60
+    unit: ratio
+    measurement: "jam_recovery_attempted=true 的 episode 中恢复成功比例。"
+    sample_count: 50
+    seeds: [0, 1, 2]
+    uses_privileged_truth: false
+    disturbance_scope: "检测到卡滞后允许后退、抬起并重试。"
+  - name: dangerous_event_count
+    comparator: "=="
+    threshold: 0
+    unit: count
+    measurement: "CONTACT_FORCE_EXCEEDED、SAFETY_WORKSPACE_VIOLATION 或 dangerous_event=true 的 episode 数。"
+    sample_count: 300
+    seeds: [0, 1, 2]
+    uses_privileged_truth: true
+    disturbance_scope: "全部测试分布。"
+  - name: mean_retries
+    comparator: "<="
+    threshold: 1.5
+    unit: retries
+    measurement: "全部 episode 的 retries 平均值。"
+    sample_count: 300
+    seeds: [0, 1, 2]
+    uses_privileged_truth: false
+    disturbance_scope: "全部测试分布。"
+  - name: failure_diagnostic_coverage
+    comparator: "=="
+    threshold: 1.0
+    unit: ratio
+    measurement: "失败 episode 中具有注册 failure_code 的比例。"
+    sample_count: 300
+    seeds: [0, 1, 2]
+    uses_privileged_truth: false
+    disturbance_scope: "全部测试分布。"
