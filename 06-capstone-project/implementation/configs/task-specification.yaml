@@ -1,0 +1,51 @@
+schema_version: "1.0"
+task_id: "gear-insertion-state-v0"
+description: "在桌面工作站中将单个齿轮抵近、对准并安装到固定轴上。Clip 00 仅定义合同，不实现环境。"
+object_type: "gear"
+target_type: "shaft"
+action_mode: "tcp_delta_pose"
+observation_mode: "state"
+control_frequency_hz: 20.0
+max_episode_steps: 400
+timeout_s: 20.0
+max_retries: 2
+success_position_tolerance_mm: 2.0
+success_orientation_tolerance_deg: 3.0
+max_contact_force_n: 20.0
+workspace_bounds_m:
+  x: {min: -0.60, max: 0.60}
+  y: {min: -0.60, max: 0.60}
+  z: {min: 0.00, max: 0.80}
+position_perturbation_mm: 10.0
+orientation_perturbation_deg: 3.0
+observations:
+  - name: robot_qpos
+    source: directly_measured
+    unit: rad
+    description: "机械臂关节编码器位置。"
+    required_for_clip01: true
+  - name: robot_qvel
+    source: directly_measured
+    unit: rad_per_s
+    description: "机械臂关节速度。"
+    required_for_clip01: true
+  - name: tcp_pose
+    source: directly_measured
+    unit: m_and_quaternion
+    description: "由机械臂运动学计算的末端位姿。"
+    required_for_clip01: true
+  - name: gear_pose
+    source: privileged_simulation
+    unit: m_and_quaternion
+    description: "Clip 01 可用仿真真值建立上界，后续必须替换为视觉估计。"
+    required_for_clip01: true
+  - name: shaft_pose
+    source: privileged_simulation
+    unit: m_and_quaternion
+    description: "Clip 01 可用仿真真值建立上界，后续必须替换为视觉估计。"
+    required_for_clip01: true
+  - name: contact_force
+    source: privileged_simulation
+    unit: N
+    description: "仿真接触力；真实系统可能来自力传感器或关节电流估计。"
+    required_for_clip01: false
