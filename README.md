@@ -150,6 +150,7 @@ Codex 单次任务模板见 [`06-capstone-project/templates/codex-task-template.
 - [x] 建立应用驱动课程设计总纲、8 个 clips 和 Codex/复盘模板
 - [ ] Lecture 01：Introduction to Robot Learning（学习中：导读、讲义和练习已建立）
 - [ ] Lecture 02：Fundamentals of Robotic Control（学习中：导读、讲义、练习和总结模板已建立）
+- [ ] Lecture 03：Markov Decision Processes（学习中：导读、讲义、练习、总结模板和独立 GridWorld 实验已建立）
 - [ ] Assignment 0：NumPy and PyTorch 能力检查
 - [ ] Clip 00：应用定义、验收指标与失败分类
 - [ ] Clip 01：建立第一个 ManiSkill 装配环境与传统控制基线
