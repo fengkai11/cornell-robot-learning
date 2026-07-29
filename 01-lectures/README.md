@@ -21,7 +21,17 @@
 
 L02 以 configuration、degrees of freedom、configuration space、task space、运动学和反馈控制为主线，建立后续 MDP、IL、MPC 与 visuomotor policy 所需的传统控制基线。
 
-完成练习并通过概念检查后，才能将讲次从“学习中”更新为“已完成”。
+### L03：Markov Decision Processes（学习中）
+
+- [课前导读](L03-markov-decision-processes/00-preview.md)
+- [正式讲义](L03-markov-decision-processes/01-notes.md)
+- [课堂练习与自测](L03-markov-decision-processes/02-exercises.md)
+- [课后总结](L03-markov-decision-processes/03-summary.md)
+- [独立 GridWorld MDP 实验](L03-markov-decision-processes/code/README.md)
+
+L03 以状态充分性、Markov 性、转移分布、策略诱导的轨迹分布和长期回报为主线，把抵近、抓取、搬运、放置与插装任务形式化为 MDP/POMDP，并通过独立代码实验达到 L4。
+
+完成练习、代码阅读、至少两项主动修改和一次故障注入后，才能将讲次从“学习中”更新为“已完成”。
 
 ## 目录约定
 
@@ -35,11 +45,20 @@ L02 以 configuration、degrees of freedom、configuration space、task space、
 │   ├── 03-summary.md
 │   └── reading-notes/
 │       └── 01-the-bitter-lesson.md
-└── L02-fundamentals-of-robotic-control/
+├── L02-fundamentals-of-robotic-control/
+│   ├── 00-preview.md
+│   ├── 01-notes.md
+│   ├── 02-exercises.md
+│   └── 03-summary.md
+└── L03-markov-decision-processes/
     ├── 00-preview.md
     ├── 01-notes.md
     ├── 02-exercises.md
-    └── 03-summary.md
+    ├── 03-summary.md
+    └── code/
+        ├── README.md
+        ├── gridworld_mdp.py
+        └── test_gridworld_mdp.py
 ```
 
 ## 文件职责
@@ -48,6 +67,7 @@ L02 以 configuration、degrees of freedom、configuration space、task space、
 - `01-notes.md`：正式讲授内容、定义、推导、例子；
 - `02-exercises.md`：概念题、推导题、机器人任务形式化练习；
 - `03-summary.md`：课后总结、掌握度和未解决问题；
+- `code/`：独立概念实验、代码阅读任务、主动修改和故障注入；
 - `reading-notes/`：保存指定阅读的原始理解、导师解析、认知修订和待读问题。
 
 ## 学习要求
